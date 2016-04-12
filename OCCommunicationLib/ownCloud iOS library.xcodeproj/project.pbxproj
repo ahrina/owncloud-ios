@@ -21,7 +21,7 @@
 		59A5B722191907F100724BE3 /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 59A5B717191907F100724BE3 /* AFURLRequestSerialization.m */; };
 		59A5B723191907F100724BE3 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 59A5B719191907F100724BE3 /* AFURLResponseSerialization.m */; };
 		59A5B724191907F100724BE3 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 59A5B71B191907F100724BE3 /* AFURLSessionManager.m */; };
-		EA05999A1BB96D14002C2864 /* OCShareUser.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0599991BB96D14002C2864 /* OCShareUser.m */; settings = {ASSET_TAGS = (); }; };
+		EA05999A1BB96D14002C2864 /* OCShareUser.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0599991BB96D14002C2864 /* OCShareUser.m */; };
 		EA73DC831B1C48EA00C3AC21 /* OCXMLServerErrorsParser.m in Sources */ = {isa = PBXBuildFile; fileRef = EA73DC821B1C48EA00C3AC21 /* OCXMLServerErrorsParser.m */; };
 		EA7CC89B183E11E600B6A4B4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7CC89A183E11E600B6A4B4 /* Foundation.framework */; };
 		EA7CC8A9183E11E600B6A4B4 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7CC8A8183E11E600B6A4B4 /* XCTest.framework */; };
@@ -42,7 +42,7 @@
 		EA7CC92F183E14A100B6A4B4 /* OCWebDAVClient.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7CC925183E14A100B6A4B4 /* OCWebDAVClient.m */; };
 		EA7CC934183E150000B6A4B4 /* OCCommunication.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7CC933183E150000B6A4B4 /* OCCommunication.m */; };
 		EA7CC935183E150000B6A4B4 /* OCCommunication.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7CC933183E150000B6A4B4 /* OCCommunication.m */; };
-		EA913A721BE9FB0700D015B8 /* OCCapabilities.m in Sources */ = {isa = PBXBuildFile; fileRef = EA913A711BE9FB0700D015B8 /* OCCapabilities.m */; settings = {ASSET_TAGS = (); }; };
+		EA913A721BE9FB0700D015B8 /* OCCapabilities.m in Sources */ = {isa = PBXBuildFile; fileRef = EA913A711BE9FB0700D015B8 /* OCCapabilities.m */; };
 		EAABAA32183E688900909831 /* OCFileDto.m in Sources */ = {isa = PBXBuildFile; fileRef = EAABAA31183E688900909831 /* OCFileDto.m */; };
 		EAABAA33183E688900909831 /* OCFileDto.m in Sources */ = {isa = PBXBuildFile; fileRef = EAABAA31183E688900909831 /* OCFileDto.m */; };
 		EAABAB1E1858594A00909831 /* OCChunkDto.m in Sources */ = {isa = PBXBuildFile; fileRef = EAABAB191858594A00909831 /* OCChunkDto.m */; };
@@ -407,7 +407,7 @@
 		EA7CC88F183E11E600B6A4B4 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0610;
+				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = ownCloud;
 			};
 			buildConfigurationList = EA7CC892183E11E600B6A4B4 /* Build configuration list for PBXProject "ownCloud iOS library" */;
@@ -535,6 +535,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -632,6 +633,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS = UNIT_TEST;
 				INFOPLIST_FILE = "OCCommunicationLibTests/ownCloud iOS libraryTests-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "owncloud.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "ownCloud iOS libraryTests";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -651,6 +653,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS = "";
 				INFOPLIST_FILE = "OCCommunicationLibTests/ownCloud iOS libraryTests-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "owncloud.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "ownCloud iOS libraryTests";
 				WRAPPER_EXTENSION = xctest;
 			};

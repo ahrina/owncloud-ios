@@ -427,10 +427,8 @@
  */
 + (void) addCookiesToStorageFromResponse: (NSHTTPURLResponse *) response andPath:(NSURL *) url {
     NSArray* cookies = [NSHTTPCookie cookiesWithResponseHeaderFields:[response allHeaderFields] forURL:url];
-    NSLog(@"cookies: %@", cookies);
     
     for (NSHTTPCookie *current in cookies) {
-        NSLog(@"Current: %@", current);
         [[NSHTTPCookieStorage sharedHTTPCookieStorage] setCookie:current];
     }
 }

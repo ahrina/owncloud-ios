@@ -78,14 +78,14 @@
 
 #else
         //Network Upload queue for NSURLSession (iOS 7)
-        NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration backgroundSessionConfiguration:k_session_name];
+        NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration backgroundSessionConfigurationWithIdentifier:k_session_name];
         configuration.HTTPMaximumConnectionsPerHost = 1;
         configuration.requestCachePolicy = NSURLRequestReloadIgnoringLocalCacheData;
         _uploadSessionManager = [[AFURLSessionManager alloc] initWithSessionConfiguration:configuration];
         [_uploadSessionManager.operationQueue setMaxConcurrentOperationCount:1];
         
         //Network Download queue for NSURLSession (iOS 7)
-        NSURLSessionConfiguration *downConfiguration = [NSURLSessionConfiguration backgroundSessionConfiguration:k_download_session_name];
+        NSURLSessionConfiguration *downConfiguration = [NSURLSessionConfiguration backgroundSessionConfigurationWithIdentifier:k_download_session_name];
         downConfiguration.HTTPShouldUsePipelining = YES;
         downConfiguration.HTTPMaximumConnectionsPerHost = 1;
         downConfiguration.requestCachePolicy = NSURLRequestReloadIgnoringLocalCacheData;

@@ -201,8 +201,6 @@
 
 - (void)parserDidEndDocument:(NSXMLParser *)parser{
     
-    //NSLog(@"Finish xml directory list parse");
-    
     if (_currentShared) {
         
         [_shareList addObject:_currentShared];

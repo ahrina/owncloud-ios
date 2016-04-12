@@ -43,7 +43,6 @@
 - (id)initWithInputStream:(NSInputStream *) stream andBytesToRead:(long long) bytesToRead;
 
 @property (nonatomic, retain) NSInputStream *parentStream;
-@property (nonatomic,weak) __weak id <NSStreamDelegate> delegate;
 @property BOOL isChunkComplete;
 @property NSInteger bytesReadInThisIteration;
 @property long long totalBytesRead;

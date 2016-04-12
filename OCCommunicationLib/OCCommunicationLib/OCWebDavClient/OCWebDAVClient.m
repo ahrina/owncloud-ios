@@ -348,9 +348,6 @@ NSString const *OCWebDAVModificationDateKey	= @"modificationdate";
 
 
 - (NSURLSessionDownloadTask *)downloadWithSessionPath:(NSString *)remoteSource toPath:(NSString *)localDestination defaultPriority:(BOOL)defaultPriority onCommunication:(OCCommunication *)sharedOCCommunication withProgress:(NSProgress * __autoreleasing *) progressValue success:(void(^)(NSURLResponse *response, NSURL *filePath))success failure:(void(^)(NSURLResponse *response, NSError *error))failure{
-    
-    NSLog(@"localSource: %@", remoteSource);
-    NSLog(@"remoteDestination: %@", localDestination);
    
     NSMutableURLRequest *request = [self requestWithMethod:@"GET" path:remoteSource parameters:nil];
     
@@ -375,7 +372,6 @@ NSString const *OCWebDAVModificationDateKey	= @"modificationdate";
             NSLog(@"Error: %@", error);
             failure(response, error);
         } else {
-            NSLog(@"Success: %@ %@", response, filePath.absoluteString);
             success(response,filePath);
         }
         
@@ -419,10 +415,6 @@ NSString const *OCWebDAVModificationDateKey	= @"modificationdate";
 
 - (NSOperation *)putLocalPath:(NSString *)localSource atRemotePath:(NSString *)remoteDestination onCommunication:(OCCommunication *)sharedOCCommunication   progress:(void(^)(NSUInteger, long long))progress success:(void(^)(OCHTTPRequestOperation *, id))success failure:(void(^)(OCHTTPRequestOperation *, NSError *))failure forceCredentialsFailure:(void(^)(NSHTTPURLResponse *, NSError *))forceCredentialsFailure shouldExecuteAsBackgroundTaskWithExpirationHandler:(void (^)(void))handler {
     
-    
-    NSLog(@"localSource: %@", localSource);
-    NSLog(@"remoteDestination: %@", remoteDestination);
-    
     _requestMethod = @"PUT";
     
     NSMutableURLRequest *request = [self requestWithMethod:_requestMethod path:remoteDestination parameters:nil];
@@ -464,10 +456,6 @@ NSString const *OCWebDAVModificationDateKey	= @"modificationdate";
 
 - (NSURLSessionUploadTask *)putWithSessionLocalPath:(NSString *)localSource atRemotePath:(NSString *)remoteDestination onCommunication:(OCCommunication *)sharedOCCommunication withProgress:(NSProgress * __autoreleasing *) progressValue success:(void(^)(NSURLResponse *, NSString *))success failure:(void(^)(NSURLResponse *, id, NSError *))failure failureBeforeRequest:(void(^)(NSError *)) failureBeforeRequest {
     
-    
-    NSLog(@"localSource: %@", localSource);
-    NSLog(@"remoteDestination: %@", remoteDestination);
-    
     NSFileManager *fileManager = [NSFileManager defaultManager];
     
     if (localSource == nil || ![fileManager fileExistsAtPath:localSource]) {
@@ -508,7 +496,6 @@ NSString const *OCWebDAVModificationDateKey	= @"modificationdate";
                                                                                                      NSLog(@"Error: %@", error);
                                                                                                      failure(response, responseObject, error);
                                                                                                  } else {
-                                                                                                     NSLog(@"Success: %@ %@", response, responseObject);
                                                                                                      success(response,responseObject);
                                                                                                  }
                                                                                              }];

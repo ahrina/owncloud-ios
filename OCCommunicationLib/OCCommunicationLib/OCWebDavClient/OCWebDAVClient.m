@@ -156,6 +156,7 @@ NSString const *OCWebDAVModificationDateKey	= @"modificationdate";
     
     [request setCachePolicy: NSURLRequestReloadIgnoringLocalCacheData];
     [request setTimeoutInterval: k_timeout_webdav];
+	[request setAllowsCellularAccess:_allowsCellularAccess];
     
     return request;
 }

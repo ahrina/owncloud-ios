@@ -598,6 +598,7 @@
     OCWebDAVClient *request = [[OCWebDAVClient alloc] initWithBaseURL:[NSURL URLWithString:@""]];
     request = [self getRequestWithCredentials:request];
     request.securityPolicy = _securityPolicy;
+	request.allowsCellularAccess = _allowsCellularAccess;
     
     remotePath = [remotePath encodeString:NSUTF8StringEncoding];
     

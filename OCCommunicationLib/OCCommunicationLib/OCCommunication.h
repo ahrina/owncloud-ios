@@ -65,6 +65,7 @@ typedef enum {
 @property (nonatomic, strong) AFURLSessionManager *uploadSessionManager;
 @property (nonatomic, strong) AFURLSessionManager *downloadSessionManager;
 @property (nonatomic, strong) AFSecurityPolicy * securityPolicy;
+@property (nonatomic, assign) BOOL allowsCellularAccess;
 
 
 /*This flag control the use of cookies on the requests.

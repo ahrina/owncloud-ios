@@ -57,6 +57,8 @@ extern NSString *OCWebDAVModificationDateKey;
 @property (nonatomic, strong) NSString *redirectedServer;
 //We use this variable to get the Cookies from the storage provider
 @property (nonatomic, strong) NSString *originalUrlServer;
+//Restrict cellular access for generated requests
+@property (nonatomic, assign) BOOL allowsCellularAccess;
 
 @property (nonatomic, strong) NSString *postStringForShare;
 

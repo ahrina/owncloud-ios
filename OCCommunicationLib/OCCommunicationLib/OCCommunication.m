@@ -71,6 +71,7 @@
         
         _isCookiesAvailable = NO;
         _isForbiddenCharactersAvailable = NO;
+		_allowsCellularAccess = YES;
 
 #ifdef UNIT_TEST
         _uploadSessionManager = [[AFURLSessionManager alloc] initWithSessionConfiguration:nil];
@@ -114,6 +115,7 @@
         
         _isCookiesAvailable = NO;
         _isForbiddenCharactersAvailable = NO;
+		_allowsCellularAccess = YES;
         
         //Credentials not set yet
         _kindOfCredential = credentialNotSet;
@@ -141,6 +143,8 @@
         
         //Init the Donwload queue array
         _downloadOperationQueueArray = [NSMutableArray new];
+		
+		_allowsCellularAccess = YES;
         
         //Credentials not set yet
         _kindOfCredential = credentialNotSet;

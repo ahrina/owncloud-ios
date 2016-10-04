@@ -63,8 +63,7 @@ NSString const *OCWebDAVModificationDateKey	= @"modificationdate";
 
 - (id)initWithBaseURL:(NSURL *)url {
     if ((self = [super initWithBaseURL:url])) {
-        
-        
+		_allowsCellularAccess = YES;
     }
     
     return self;

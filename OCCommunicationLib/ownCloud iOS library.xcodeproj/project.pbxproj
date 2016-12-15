@@ -407,7 +407,7 @@
 		EA7CC88F183E11E600B6A4B4 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = ownCloud;
 			};
 			buildConfigurationList = EA7CC892183E11E600B6A4B4 /* Build configuration list for PBXProject "ownCloud iOS library" */;
